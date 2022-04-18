@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["RestWithASPNETUdemy/RestWithASPNETUdemy.csproj", "RestWithASPNETUdemy/"]
+COPY ["RestWithASPNETUdemy.csproj", "RestWithASPNETUdemy/"]
 RUN dotnet restore "RestWithASPNETUdemy/RestWithASPNETUdemy.csproj"
 COPY . .
 WORKDIR "/src/RestWithASPNETUdemy"
